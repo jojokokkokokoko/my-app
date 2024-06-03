@@ -6,6 +6,7 @@ import {
 	TextInput,
 	TouchableOpacity,
 } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome"; // Import FontAwesome icons
 
 const App = () => {
 	const [numericValue, setNumericValue] = useState("");
@@ -22,10 +23,17 @@ const App = () => {
 				onChangeText={setNumericValue}
 			/>
 			<TouchableOpacity style={styles.facebookButton}>
-				<Text style={styles.buttonText}>Login Using Facebook</Text>
+				<Icon name="facebook" size={20} color="white" style={styles.iconLeft} />
+				<Text style={styles.buttonText}> Login Using Facebook</Text>
 			</TouchableOpacity>
 			<TouchableOpacity style={styles.googleButton}>
-				<Text style={styles.buttonText}>Login Using Google Plus</Text>
+				<Icon
+					name="google-plus"
+					size={20}
+					color="white"
+					style={styles.iconLeft}
+				/>
+				<Text style={styles.buttonText}> Login Using Google Plus</Text>
 			</TouchableOpacity>
 		</View>
 	);
@@ -62,20 +70,29 @@ const styles = StyleSheet.create({
 		width: "80%",
 		height: 40,
 		backgroundColor: "#3b5998",
+		flexDirection: "row",
 		justifyContent: "center",
 		alignItems: "center",
 		marginBottom: 10,
+		position: "relative",
 	},
 	googleButton: {
 		width: "80%",
 		height: 40,
 		backgroundColor: "#db4a39",
+		flexDirection: "row",
 		justifyContent: "center",
 		alignItems: "center",
+		position: "relative",
 	},
 	buttonText: {
 		color: "white",
 		fontSize: 16,
+		marginLeft: 10, // Add margin to separate icon and text
+	},
+	iconLeft: {
+		position: "absolute",
+		left: 10,
 	},
 });
 
