@@ -24,7 +24,8 @@ const App = () => {
 			/>
 			<TouchableOpacity style={styles.facebookButton}>
 				<Icon name="facebook" size={20} color="white" style={styles.iconLeft} />
-				<Text style={styles.buttonText}> Login Using Facebook</Text>
+				<View style={styles.separator} />
+				<Text style={styles.buttonText}>Login Using Facebook</Text>
 			</TouchableOpacity>
 			<TouchableOpacity style={styles.googleButton}>
 				<Icon
@@ -33,7 +34,8 @@ const App = () => {
 					color="white"
 					style={styles.iconLeft}
 				/>
-				<Text style={styles.buttonText}> Login Using Google Plus</Text>
+				<View style={styles.separator} />
+				<Text style={styles.buttonText}>Login Using Google Plus</Text>
 			</TouchableOpacity>
 		</View>
 	);
@@ -71,7 +73,6 @@ const styles = StyleSheet.create({
 		height: 40,
 		backgroundColor: "#3b5998",
 		flexDirection: "row",
-		justifyContent: "center",
 		alignItems: "center",
 		marginBottom: 10,
 		position: "relative",
@@ -81,18 +82,22 @@ const styles = StyleSheet.create({
 		height: 40,
 		backgroundColor: "#db4a39",
 		flexDirection: "row",
-		justifyContent: "center",
 		alignItems: "center",
 		position: "relative",
 	},
 	buttonText: {
 		color: "white",
 		fontSize: 16,
-		marginLeft: 10, // Add margin to separate icon and text
+		marginLeft: 10, // Adjust this value if needed
 	},
 	iconLeft: {
-		position: "absolute",
-		left: 10,
+		marginLeft: 10,
+	},
+	separator: {
+		width: 1,
+		height: "80%",
+		backgroundColor: "white",
+		marginHorizontal: 10, // Adjust this value if needed
 	},
 });
 
